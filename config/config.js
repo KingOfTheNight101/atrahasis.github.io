@@ -17,7 +17,7 @@ address: '<a href="https://atrahasis.info" target="_blank">atrahasis.info</a>',
         "Dream without limits, prototype without fear, and refine without ego."
     ],
 
-    welcome: "Technological Polymath<br>Advanced Design / Cross-Disciplinary Development / Industrial Strategy<br>Glad to have you here.",
+    welcome: "Technological Polymath & Inventor<br>Advanced Design / Cross-Disciplinary Development / Industrial Strategy<br>Glad to have you here.",
 
     about: "<p>I am a technological polymath operating at the intersection of advanced design, cross-disciplinary development, and industrial strategy.</p>" +
 "<p>Utilising industry-leading edge tools, I investigate complex market gaps to engineer high-impact products and foundational research that kickstart new industries.</p>" +

@@ -8,13 +8,13 @@ email: "your-email@example.com",   // put your real email if you want
 address: '<a href="https://atrahasis.info" target="_blank">atrahasis.info</a>',
     qq: '<strong>Template saved you time?</strong> <a href="https://happysnaker.github.io/support/#from-resume" target="_blank">Tip ¥9.9 / ¥19.9 via WeChat / Alipay</a><br><strong>Portfolio still feels generic / student-ish?</strong> <a href="https://happysnaker.github.io/review/" target="_blank">Book a ¥29.9 quick read / ¥99 async review</a>',
     log: "Atrahasis",
-    excpect_work: "Advanced Design / Cross-Disciplinary Development / Industrial Strategy,
+    excpect_work: "Advanced Design / Cross-Disciplinary Development / Industrial Strategy",
 
     motto: [
         "To pull the unseen into form, balance it on the edge of chaos, and tune it to the frequency of reality."
         "Envision the problem, build to test, fail to learn, and prove to last.",
         "From the sketch to the bench, from the break to the breakthrough.",
-        "Dream without limits, prototype without fear, and refine without ego.",
+        "Dream without limits, prototype without fear, and refine without ego."
     ],
 
     welcome: "Technological Polymath<br>Advanced Design / Cross-Disciplinary Development / Industrial Strategy<br>Glad to have you here.",

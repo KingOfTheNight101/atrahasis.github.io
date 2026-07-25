@@ -61,7 +61,7 @@ skills_description: "",
 
     url: [
         "./images/index_background.jpg",
-        "./images/avatar.jpg",
+        "./images/avatar.png",
         "./images/work-bk.png",
         "./images/4.jpg"
     ]

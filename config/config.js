@@ -26,7 +26,14 @@ address: '<a href="https://atrahasis.info" target="_blank">atrahasis.info</a>',
 skills: [],
 skills_description: "",
 
-    portfolio: [],
+portfolio: [
+    [
+        "./images/card-oss-contrib.png",
+        "./White_Papers/GEOMETRIC_PHOTONIC_RAM__G_PRAM_ (Final).pdf",
+        "GEOMETRIC PHOTONIC RAM (G-PRAM)",
+        "Photonic platforms smash resistive losses and enable WDM/ultrafast nonlinearities, but photonic memories still wrestle with energy, endurance, and density trade-offs. G-PRAM integrates low-loss Sb₂Se₃ PCM for bit encoding via phase/geometry; plasmonic hotspots drive writes; TFLN SHG handles decoupled, frequency-encoded readout."
+    ]
+],
 
     work: [],
 

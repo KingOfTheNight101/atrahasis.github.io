@@ -1,12 +1,12 @@
 var config = {
-    /* Demo profile data for the template. Replace as needed. */
     name: "Godfree Gale",
-sex: "Independant Inventor",
-age: "United Kingdom",          // or wherever you are
-phone: '<a href="https://github.com/KingOfTheNight101" target="_blank">github.com/KingOfTheNight101</a>',
-email: "your-email@example.com",   // put your real email if you want
-address: '<a href="https://atrahasis.info" target="_blank">atrahasis.info</a>',
-    qq: '<strong>Template saved you time?</strong> <a href="https://happysnaker.github.io/support/#from-resume" target="_blank">Tip ¥9.9 / ¥19.9 via WeChat / Alipay</a><br><strong>Portfolio still feels generic / student-ish?</strong> <a href="https://happysnaker.github.io/review/" target="_blank">Book a ¥29.9 quick read / ¥99 async review</a>',
+    sex: "Independent Inventor",
+    age: "United Kingdom",
+    phone: '<a href="https://github.com/KingOfTheNight101" target="_blank" rel="noopener noreferrer">github.com/KingOfTheNight101</a>',
+    /* Plain address for mailto: — replace with your real inbox when ready */
+    email: "",
+    address: '<a href="https://atrahasis.info" target="_blank" rel="noopener noreferrer">atrahasis.info</a>',
+    qq: 'Reach out via <a href="https://github.com/KingOfTheNight101" target="_blank" rel="noopener noreferrer">GitHub</a> or <a href="https://atrahasis.info" target="_blank" rel="noopener noreferrer">atrahasis.info</a>.',
     log: "Atrahasis",
     excpect_work: "Advanced Design / Cross-Disciplinary Development / Industrial Strategy",
 
@@ -17,32 +17,32 @@ address: '<a href="https://atrahasis.info" target="_blank">atrahasis.info</a>',
         "Dream without limits, prototype without fear, and refine without ego."
     ],
 
-    welcome: "Technological Polymath & Inventor<br>Advanced Design / Cross-Disciplinary Development / Industrial Strategy<br>Glad to have you here.",
+    welcome: "Technological Polymath & Inventor<br>Advanced Design · Cross-Disciplinary Development · Industrial Strategy<br>Glad to have you here.",
 
-    about: "<p>I am a technological polymath operating at the intersection of advanced design, cross-disciplinary development, and industrial strategy.</p>" +
-"<p>Utilising industry-leading edge tools, I investigate complex market gaps to engineer high-impact products and foundational research that kickstart new industries.</p>" +
-"<p>My development workflow knows no bounds; I design with the absolute conviction that any product can be brought to life using any manufacturing technique available.</p>",
+    about:
+        "<p>I am a technological polymath operating at the intersection of advanced design, cross-disciplinary development, and industrial strategy.</p>" +
+        "<p>Using leading-edge tools, I investigate complex market gaps to engineer high-impact products and foundational research that can seed new industries.</p>" +
+        "<p>My development workflow is deliberately unbounded: I design with the conviction that a product can be brought to life with whatever manufacturing technique fits the problem.</p>",
 
-skills: [],
-skills_description: "",
+    skills: [],
+    skills_description: "",
 
-portfolio: [
-    [
-        "./images/card-oss-contrib.png",
-        "./White_Papers/GEOMETRIC_PHOTONIC_RAM__G_PRAM_ (Final).pdf",
-        "GEOMETRIC PHOTONIC RAM (G-PRAM)",
-        "Non-volatile Photonic Memory and Nonlinear Logic"
-    ]
-],
+    portfolio: [
+        [
+            "./images/card-g-pram.jpg",
+            "./White_Papers/GEOMETRIC_PHOTONIC_RAM__G_PRAM_ (Final).pdf",
+            "Geometric Photonic RAM (G-PRAM)",
+            "Non-volatile photonic memory and nonlinear logic"
+        ]
+    ],
 
     work: [],
 
     others: [],
 
     icon: [
-        ["./svg/github.svg", "https://github.com/happysnaker", "GitHub profile"],
-        ["./svg/博客.svg", "https://happysnaker.github.io/", "Technical blog"],
-        ["./svg/github.svg", "https://happysnaker.github.io/support/#from-resume", "Support via WeChat / Alipay"]
+        ["./svg/github.svg", "https://github.com/KingOfTheNight101", "GitHub"],
+        ["./svg/博客.svg", "https://atrahasis.info", "atrahasis.info"]
     ],
 
     url: [
@@ -51,4 +51,4 @@ portfolio: [
         "./images/work-bk.png",
         "./images/4.jpg"
     ]
-}
+};

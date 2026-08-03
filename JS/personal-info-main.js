@@ -11,7 +11,9 @@ $(function () {
         $(".sex").html(config.sex);
         $(".age").html(config.age);
         $(".phone").html(config.phone);
-        $(".email").html(config.email);
+        $(".email").html(config.email && String(config.email).trim()
+            ? config.email
+            : "Available on request");
         $(".address").html(config.address);
         $(".qq").html(config.qq);
         $(".log").html(config.log);
@@ -34,11 +36,14 @@ $(function () {
             "position": "relative !important"
         });
         $(".others-section").css("background", "url(" + config.url[3] + ")");
-        $(".desc").html(config.skills_description);
-        //------E-------
+        $(".desc").html(config.skills_description || "");
 
+        // Hide email compose form until a real address is set in config.email
+        if (!config.email || !String(config.email).trim()) {
+            $(".contact-section .col-sm-6").first().hide();
+        }
 
-        if (config.skills) {
+        if (config.skills && config.skills.length) {
             for (let i = 0; i < config.skills.length; i++) {
                 let skill_name = config.skills[i][0];
                 let num = config.skills[i][1];
@@ -56,11 +61,14 @@ $(function () {
                     "</div>";
                 $(".skill-body").append(s)
             }
+        } else {
+            $("#skill").hide();
+            $('a.nav-link[href="#skill"]').parent().hide();
         }
 
 
         let row_i = 0;
-        if (config.portfolio) {
+        if (config.portfolio && config.portfolio.length) {
             for (let i = 0; i < config.portfolio.length; i++) {
                 if (i % 3 == 0) {
                     $(".portfolio-section-main-container").append("<div class=\"row\"></div>");
@@ -74,9 +82,9 @@ $(function () {
                 e.append("<div class=\"col-md-4\">\n" +
                     "    <div class=\"porfolio-image img-raised\" data-aos=\"fade-up\"\n" +
                     "         data-aos-anchor-placement=\"top-bottom\">\n" +
-                    "        <a href=\"" + url + "\" title=\"点击查看详细信息\">\n" +
+                    "        <a href=\"" + url + "\" title=\"Open project\" target=\"_blank\" rel=\"noopener noreferrer\">\n" +
                     "            <figure class=\"portfolio-section-main\">\n" +
-                    "                <img src=\"" + img + "\" alt=\"Image\" />\n" +
+                    "                <img src=\"" + img + "\" alt=\"" + projectName + "\" />\n" +
                     "                <figcaption>\n" +
                     "                    <div class=\"h4\">" + projectName + "</div>\n" +
                     "                    <p>" + brief + "</p>\n" +
@@ -86,10 +94,13 @@ $(function () {
                     "    </div>\n" +
                     "</div>");
             }
+        } else {
+            $("#project").hide();
+            $('a.nav-link[href="#project"]').parent().hide();
         }
 
 
-        if (config.work) {
+        if (config.work && config.work.length) {
             for (let i = 0; i < config.work.length; i++) {
 
                 let time = config.work[i][0];
@@ -118,9 +129,12 @@ $(function () {
                     "</div>"
                 );
             }
+        } else {
+            $("#work").hide();
+            $('a.nav-link[href="#work"]').parent().hide();
         }
 
-        if (config.others) {
+        if (config.others && config.others.length) {
             for (let i = 0; i < config.others.length; i++) {
                 var e;
                 if (i % 2 == 0) {
@@ -143,6 +157,9 @@ $(function () {
                     "</li>"
                 )
             }
+        } else {
+            $("#others").hide();
+            $('a.nav-link[href="#others"]').parent().hide();
         }
 
         if (config.icon) {
@@ -151,8 +168,8 @@ $(function () {
                 let url = config.icon[i][1];
                 let desc = config.icon[i][2];
                 $(".icon-insert").append(
-                    "<a class=\"my-tooltip\" href=\"" + url + "\" title=\"访问我的社交平台\">\n" +
-                    "    <img src=\"" + img + "\" alt=\"\">\n" +
+                    "<a class=\"my-tooltip\" href=\"" + url + "\" title=\"" + desc + "\" target=\"_blank\" rel=\"noopener noreferrer\">\n" +
+                    "    <img src=\"" + img + "\" alt=\"" + desc + "\">\n" +
                     "    <span class=\"my-tooltiptext\">" + desc + "</span>\n" +
                     "</a>"
                 );
@@ -201,26 +218,29 @@ $(function () {
     $(".send-btn").on("click", mailsend);
 
     function mailsend() {
+        if (!config.email || !String(config.email).trim()) {
+            window.open("https://github.com/KingOfTheNight101", "_blank", "noopener,noreferrer");
+            return;
+        }
         var subject = $(".subject").val();
         var content = $(".message").val();
         content = content.replace(new RegExp(' ', 'g'), '%20');
 
         content = content.replace(new RegExp('\n', 'g'), '%0d%0a');
 
-        // if (confirm("你确定要向" + who + "放送邮件吗?") == true) {
-        //     location="mailto:sample@fly63.com?subject=test&cc=sample@hotmail.com&subject=主题&body=内容";
-        // }
         location = "mailto:" + config.email + "?subject=" + subject + "&body=" + content;
     }
 
 
 
 
-    // ---- 座右铭字缓出效果 -----
-    var text = "Build useful things, then explain them clearly.";
+    // ---- Motto typewriter -----
+    var mottoArrs = (config && config.motto && config.motto.length) ? config.motto : [
+        "To pull the unseen into form, balance it on the edge of chaos, and tune it to the frequency of reality."
+    ];
+    var text = mottoArrs[0];
     var length = text.length;
     let index = 0;
-    var mottoArrs = config.motto;
     // $.ajaxSettings.async = false;
     // $.getJSON("./motto.json", function (data) {
     //     mottoArrs = data;

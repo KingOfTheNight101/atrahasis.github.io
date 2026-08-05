@@ -186,18 +186,8 @@ $(function () {
     })
 
     progress();
-    if ($(window).scrollTop() >= $(".page-header").height() - $(".page-header .bg-primary").height()) {
-        $(".page-header .bg-primary").css("cssText", "background-color:rgb(55 65 178)!important");
-    }
+    // Toolbar stays soft transparent black over hero and white content (no purple scroll state)
     $(window).scroll(function () {
-        h = $(".page-header").height() - $(".page-header .bg-primary").height();
-        if ($(window).scrollTop() >= h) {
-            $(".page-header .bg-primary").css("cssText", "background-color:rgb(55 65 178)!important");
-        } else {
-            $(".page-header .bg-primary").css("cssText", "background-color:rgba(0,0,0,0.20)!important");
-        }
-
-
         if ($(".skill-section .card").hasClass("aos-animate")) {
             $(".progress-bar-inner").addClass("p-a");
             progress();

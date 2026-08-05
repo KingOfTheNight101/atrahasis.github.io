@@ -206,8 +206,8 @@ html {
     overflow: hidden;
     width: 100%;
     margin-bottom: 20px;
-    -webkit-box-shadow: -1px 5px 25px 0px rgb(0 0 0 / 20%);
-    box-shadow: -1px 5px 25px 0px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 4px 14px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 4px 14px rgba(0, 0, 0, 0.35);
     background-color: antiquewhite;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
@@ -218,14 +218,20 @@ html {
 .about-section .card:hover,
 .skill-section .card:hover,
 .experience-section .card:hover,
-.portfolio-section .card:hover {
+.portfolio-section .card:hover,
+.contact-section .card:hover {
     transform: scale(1.02, 1.02) !important;
+    -webkit-box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55), 0 8px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55), 0 8px 20px rgba(0, 0, 0, 0.4);
 }
 
-/* About info panel: slate panel, white copy; links stay blue */
-.about-section .card {
-    background-color: #465059;
+/* About + Contact: slate panels, white copy; links stay blue */
+.about-section .card,
+.contact-section .card {
+    background-color: #465059 !important;
     color: #ffffff;
+    -webkit-box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 6px 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5), 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 .about-section .card .title,
@@ -233,16 +239,25 @@ html {
 .about-section .card strong,
 .about-section .card p,
 .about-section .card span,
-.about-section .card .me {
+.about-section .card .me,
+.contact-section .card .title,
+.contact-section .card .h4,
+.contact-section .card strong,
+.contact-section .card p,
+.contact-section .card span,
+.contact-section .card label {
     color: #ffffff;
 }
 
-.about-section .card a {
+.about-section .card a,
+.contact-section .card a {
     color: #4da3ff;
 }
 
 .about-section .card a:hover,
-.about-section .card a:focus {
+.about-section .card a:focus,
+.contact-section .card a:hover,
+.contact-section .card a:focus {
     color: #7ec0ff;
 }
 
@@ -844,8 +859,15 @@ html {
     }
 }
 
-.contact-section .card {
-    background-color: white !important;
+/* Contact form fields stay readable on slate card */
+.contact-section .form-control {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #222;
+}
+
+.contact-section .input-group-addon {
+    background-color: rgba(255, 255, 255, 0.85);
+    color: #333;
 }
 
 .contact-section .msg {

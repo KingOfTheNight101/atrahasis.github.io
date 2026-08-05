@@ -47,7 +47,7 @@ var config = {
 
     url: [
         "./images/index_background.jpg",
-        "./images/avatar.jpg",
+        "./images/White Dwarf-03.png",
         "./images/work-bk.png",
         "./images/4.jpg"
     ]

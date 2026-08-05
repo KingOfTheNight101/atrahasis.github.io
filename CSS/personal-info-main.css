@@ -125,7 +125,7 @@ html {
 
 .personalImage a:before {
     content: "";
-    border: 15px solid rgb(117 49 171);
+    border: 15px solid rgb(255, 255, 255);
     border-radius: 50%;
     height: 180px;
     width: 180px;
@@ -222,6 +222,30 @@ html {
     transform: scale(1.02, 1.02) !important;
 }
 
+/* About info panel: slate panel, white copy; links stay blue */
+.about-section .card {
+    background-color: #465059;
+    color: #ffffff;
+}
+
+.about-section .card .title,
+.about-section .card .h4,
+.about-section .card strong,
+.about-section .card p,
+.about-section .card span,
+.about-section .card .me {
+    color: #ffffff;
+}
+
+.about-section .card a {
+    color: #4da3ff;
+}
+
+.about-section .card a:hover,
+.about-section .card a:focus {
+    color: #7ec0ff;
+}
+
 .h4 {
     font-size: 1.714em;
     line-height: 1.45em;
@@ -255,7 +279,7 @@ html {
     left: 0;
     right: 0;
     bottom: 0;
-    background: #067927;
+    background: #465059;
     ;
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
@@ -274,7 +298,7 @@ html {
 .hvr-bounce-to-right:active {
     color: white;
     text-decoration: none;
-    border: 1px solid #067927;
+    border: 1px solid #465059;
     ;
 }
 
